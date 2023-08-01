@@ -1,0 +1,11 @@
+services:
+  web:
+    container_name: web
+    build:
+      context: .
+      target: dev-envs
+      dockerfile: ./.docker/Dockerfile
+    ports:
+      - '8000:8000'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
